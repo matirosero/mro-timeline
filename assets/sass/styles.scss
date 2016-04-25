@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
 
@@ -6,3 +8,12 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
+
+// Vendor
+@import "vendor/nivo-lightbox";
+
+// DW Timline
+@import "theme/theme"; // Bootstrap + WordPress Elements Overide
+@import "theme/layout"; // Main Layout
+@import "theme/timeline"; // Timeline
+@import "theme/hentry"; // Posts + Pages + Comments
