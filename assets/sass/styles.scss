@@ -7,12 +7,14 @@
 @import "bootstrap-variables";
 
 // Import Bootstrap for Sass
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 // Vendor
 @import "vendor/nivo-lightbox";
 
 // DW Timline
+@import "mixins";
 @import "theme/theme"; // Bootstrap + WordPress Elements Overide
 @import "theme/layout"; // Main Layout
 @import "theme/timeline"; // Timeline

@@ -34,14 +34,14 @@
       margin: 0 0 1px;
 
       &:hover {
-         color: @brand-danger;
-         border-left-color: @brand-danger;
+         color: $brand-danger;
+         border-left-color: $brand-danger;
       }
    }
 
    .active a {
-      color: @brand-danger;
-      border-left-color: @brand-danger;
+      color: $brand-danger;
+      border-left-color: $brand-danger;
    }
 }
 
@@ -68,7 +68,7 @@
       border: 1px solid #e5e5e5;
       color: #bbb;
       font-weight: 500;
-      border-radius: @border-radius-small;
+      border-radius: $border-radius-small;
    }
 }
 
@@ -101,7 +101,7 @@
    position: relative;
    z-index: 1;
    opacity: 0;
-   .transition( opacity .3s );
+   @include transition( opacity .3s );
    
    &:before {
       position: absolute;
@@ -238,8 +238,8 @@
    border: 1px solid #e5e5e5;
    color: #bbb;
    font-weight: 500;
-   border-radius: @border-radius-small;
-   .opacity(1) !important;
+   border-radius: $border-radius-small;
+   @include opacity(1); //!important;
 }
 
 .post-nav {

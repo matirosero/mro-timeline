@@ -29,8 +29,8 @@
          bottom: 0;
          position: absolute;
          background: #a83279;
-         #gradient > .directional(@start-color: #a83279; @end-color: #d38312; @deg: -45deg);
-         .opacity(.8);
+         @include gradient-directional($start-color: #a83279, $end-color: #d38312, $deg: -45deg);
+         @include opacity(.8);
       }
    }
 
@@ -52,14 +52,14 @@
          left: 50%;
          margin-left: -140px;
          z-index: 0;
-         .rotate(45deg);
-         .opacity(.5);
+         @include rotate(45deg);
+         @include opacity(.5);
       }
    }
 
    .page-title {
       position: relative;
-      font-family: @headings-font-family;
+      font-family: $headings-font-family;
       font-weight: bold;
       text-transform: uppercase;
       margin-top: 255px;
@@ -77,14 +77,14 @@
    }
 
    .page-description {
-      font-family: @headings-font-family;
+      font-family: $headings-font-family;
       font-size: 18px;
       text-transform: uppercase;
       font-weight: 100;
       margin: 0;
       z-index: 1;
       position: relative;
-      .opacity(.5);
+      @include opacity(.5);
    } 
 
    #get-started {
@@ -100,8 +100,8 @@
       border: 2px solid transparent;
       background: #fff;
       color: #f2664f;
-      .box-shadow(none) !important;
-      .transition( .3s );
+      @include box-shadow(none);// !important;
+      @include transition( .3s );
 
       &:hover {
          background: transparent;
@@ -116,8 +116,8 @@
          left: 0;
          top: -100%;
          color: #fff;
-         .square(100%);
-         .transition( .3s );
+         @include square(100%);
+         @include transition( .3s );
       }
 
       &:hover:before {
@@ -130,7 +130,7 @@
    position: absolute;
    top: 0;
    width: 100%;
-   z-index: @zindex-navbar;
+   z-index: $zindex-navbar;
    border-botoom: 1px solid #fff;
    border-bottom: 1px solid rgba(255,255,255,.15);
 
@@ -144,7 +144,7 @@
       > li {
          display: inline-block;
          float: none;
-         font-size: @font-size-base;
+         font-size: $font-size-base;
       }
 
       > .active {
@@ -156,7 +156,7 @@
    a {
       color: #fff;
       color: rgba(255,255,255,.7);
-      .transition(.3s);
+      @include transition(.3s);
    }
 
    .glyphicon {
@@ -193,15 +193,15 @@
       a {
          padding: 10px 15px;
          display: block;
-         color: @gray-dark;
+         color: $gray-dark;
 
          &:hover {
-            color: @brand-danger;
+            color: $brand-danger;
          }
       }
 
       .active a {
-         color: @brand-danger;
+         color: $brand-danger;
       }
 
       .has-submenu a {
@@ -255,14 +255,14 @@
    .navbar-nav  ul {
       clip: rect(0, 0, 0, 0);
       margin-top: 30px;
-      .opacity(0);
-      .transition( .3s );
+      @include opacity(0);
+      @include transition( .3s );
    }
 
    .navbar-nav li:hover > ul {
       clip: rect(0, 1500px, 1500px, 0);  
       margin-top: 0;
-      .opacity(1);
+      @include opacity(1);
    }
    
    // No Cover
@@ -271,7 +271,7 @@
       background: #fff;
       
       .navbar-nav > .active {
-         border-bottom-color: @brand-danger;
+         border-bottom-color: $brand-danger;
       }
 
       .navbar-nav ul li {
@@ -285,7 +285,7 @@
       a:hover,
       a:active,
       .active > a {
-         color: @brand-danger;
+         color: $brand-danger;
       }
    }
 }
@@ -308,7 +308,7 @@
 .sidebar {
    .widget {
       background: #fff;
-      .box-shadow(0 1px 1px 0 rgba(0,0,0,.15));
+      @include box-shadow(0 1px 1px 0 rgba(0,0,0,.15));
       padding: 30px;
       margin-top: 30px;
 
@@ -319,7 +319,7 @@
 
    .widget-inner > h3 {
       margin: 0 0 15px;
-      font-family: @font-family-base;
+      font-family: $font-family-base;
       font-size: 11px;
       text-transform: uppercase;
    }
@@ -338,8 +338,8 @@
 
 .content-info {
    background: #fff;
-   border-top: 1px solid @gray-lighter;
+   border-top: 1px solid $gray-lighter;
    text-align: center;
-   font-size: @font-size-small;
+   font-size: $font-size-small;
    padding: 60px 0;
 }

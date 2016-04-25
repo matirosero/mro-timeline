@@ -11,12 +11,12 @@
       padding: 30px 30px 0;
       margin: 0 15px 30px;
       background: #fff;
-      border-radius: @border-radius-small;
-      .box-shadow(0 1px 1px 0 rgba(0,0,0,.15));
+      border-radius: $border-radius-small;
+      @include box-shadow(0 1px 1px 0 rgba(0,0,0,.15));
    }
 
    .entry-format {
-      font-size: @font-size-small;
+      font-size: $font-size-small;
       color: #bbb;
       margin: 0 0 10px;
       text-transform: uppercase;
@@ -27,7 +27,7 @@
    }
 
    .entry-meta {
-      font-size: @font-size-small;
+      font-size: $font-size-small;
       color: #bbb;
       margin: 0 0 15px;
 
@@ -35,7 +35,7 @@
          color: #bbb;
 
          &:hover {
-            color: @brand-danger; 
+            color: $brand-danger; 
          }
       }
 
@@ -47,7 +47,7 @@
    .entry-content,
    .entry-summary {
       padding: 0 0 20px;
-      .clearfix();
+      @include clearfix();
 
       .carousel {
          margin: 0 0 10px;
@@ -95,22 +95,22 @@
    }
 
    .entry-content {
-      font-family: @headings-font-family;
+      font-family: $headings-font-family;
       font-weight: 300;
-      font-size: @font-size-content;
-      line-height: @line-height-content; 
+      font-size: $font-size-base;
+      line-height: $line-height-base; 
    }
 
    .no-cover + .wrap {
       .hentry header {
-         .page-header();
+         @include page-header();
       }
 
       .entry-meta {
          a {
             color: #999;
             &:hover {
-               color: @brand-danger;
+               color: $brand-danger;
             }
          }
       }
@@ -142,7 +142,7 @@
 
             &:hover {
                color: #fff;
-               .opacity(.8);
+               @include opacity(.8);
             }
          }
       }
@@ -178,7 +178,7 @@
 
 .error404 {
    overflow: hidden;
-   #gradient > .directional(@start-color: #1c15a3; @end-color: #5c1f73; @deg: -45deg);
+   @include gradient-directional($start-color: #1c15a3, $end-color: #5c1f73, $deg: -45deg);
    
    .banner {
       position: absolute;
@@ -207,7 +207,7 @@
             height: 1px;
             background: #fff;
             content: '';
-            .transition( .3s );
+            @include transition( .3s );
          }
 
          &:hover:before {
@@ -218,7 +218,7 @@
 
       img {
          margin-bottom: 40px;
-         .center-block();
+         @include center-block();
       }
    }
 }
@@ -233,7 +233,7 @@
 
    > h3 {
       margin: 15px 0 30px;
-      font-family: @font-family-base;
+      font-family: $font-family-base;
       font-size: 11px;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -258,7 +258,7 @@
 
       h4 {
          margin: 5px 0;
-         color: @gray-dark;
+         color: $gray-dark;
       }
 
       time {
@@ -266,11 +266,11 @@
          margin: 0 0 15px;
 
          a {
-            font-size: @font-size-small;
+            font-size: $font-size-small;
             color: #999;
 
             &:hover {
-               color: @brand-danger;
+               color: $brand-danger;
             }
          }
       }
@@ -287,7 +287,7 @@
       }
 
       .comment-reply-link .glyphicon-share-alt {
-         .rotateY(180deg);
+         @include rotateY(180deg);
       }
 
       .children {
@@ -317,7 +317,7 @@
 
    > h3 {
       margin: 15px 0 30px;
-      font-family: @font-family-base;
+      font-family: $font-family-base;
       font-size: 11px;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -332,8 +332,30 @@
    }
 
    .form-submit input[type=submit] {
-      .btn();
-      .btn-default();
+       display: inline-block;
+       margin-bottom: 0;
+       font-weight: normal;
+       text-align: center;
+       vertical-align: middle;
+       cursor: pointer;
+       background-image: none;
+       border: 1px solid transparent;
+       white-space: nowrap;
+       padding: 6px 12px;
+       font-size: 14px;
+       line-height: 1.428571429;
+       border-radius: 4px;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       -o-user-select: none;
+       user-select: none;
+       outline: none!important;
+       font-size: 10px;
+       text-transform: uppercase;
+       color: #333;
+       background-color: #fff;
+       border-color: #ccc
    }
 
    .form-group label {

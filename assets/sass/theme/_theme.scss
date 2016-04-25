@@ -5,8 +5,17 @@
 body {
    background: #f8f8f8;
    overflow-x: hidden;
-   .hyphens();
+   @include hyphens();
 }
+
+    // background: #f8f8f8;
+    // overflow-x: hidden;
+    // word-wrap: break-word;
+    // -webkit-hyphens: auto;
+    // -moz-hyphens: auto;
+    // -ms-hyphens: auto;
+    // -o-hyphens: auto;
+    // hyphens: auto
 
 a {
    outline: none !important;
@@ -31,16 +40,16 @@ img {
 }
 
 blockquote {
-   background: @brand-danger;
+   background: $brand-danger;
    border: none;
    padding: 30px;
    margin: 0 0 10px;
    color: #fff;
-   font-family: @headings-font-family;
-   border-radius: @border-radius-small;
+   font-family: $headings-font-family;
+   border-radius: $border-radius-small;
 
    p {
-      line-height: @line-height-base;
+      line-height: $line-height-base;
       font-weight: 500;
    }
 
@@ -53,8 +62,8 @@ blockquote {
    }
 
    cite {
-      font-family: @font-family-base;
-      font-size: @font-size-base;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
       font-weight: normal;
       display: block;
 
@@ -123,7 +132,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Form
    ========================================================================== */
 .form-control {
-   .box-shadow(none) !important;
+   @include box-shadow(none); //!important
 
    &:focus {
       border-color: #ccc;
@@ -140,9 +149,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    carousel
    ========================================================================== */
 .carousel-control {
-   .opacity(0);
-   .square(40px);
-   .transition( all .5s );
+   @include opacity(0);
+   @include square(40px);
+   @include transition( all .5s );
    top: 50%;
    margin: -20px 50px 0;
    border-radius: 50%;
@@ -152,7 +161,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
    .icon-next,
    .icon-prev {
-      .square(auto);
+      @include square(auto);
       position: static;
       margin: 0;
       font-size: 18px;
@@ -172,11 +181,11 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
 
    .carousel:hover & {
-      .opacity(.5);
+      @include opacity(.5);
       margin: -20px 15px 0;
 
       &:hover {
-         .opacity(.9);
+         @include opacity(.9);
       }
    }
 }
@@ -188,15 +197,15 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 .carousel-indicators {
-   .text-overflow();
+   @include text-overflow();
 
    li {
-      .transition( all .5s );
+      @include transition( all .5s );
       margin: 1px 2px !important;
    }
 
    .active {
-      .square(10px);
+      @include square(10px);
    }
 }
 
@@ -206,7 +215,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 .carousel-post-title {
-   .text-overflow();
+   @include text-overflow();
    margin-bottom: 0;
 }
 
@@ -214,14 +223,14 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Nivo lightbox
    ========================================================================== */
 .nivo-lightbox-overlay {
-   .transition(.5s);
+   @include transition(.5s);
    
    &:before {
       content: "";
       background: #000;
       position: fixed;
       top: 0;
-      .square(100%);
+      @include square(100%);
       opacity: .6;
    }
 }
@@ -231,10 +240,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    top: 50%;
    left: 50%;
    width: 85%;
-   .translate(-50%,-50%);
+   @include translate(-50%,-50%);
 
-   @media(min-width: @screen-lg) {
-      width: ~'calc(70%)';
+   @media(min-width: $screen-lg) {
+      width: calc(70%);
    }
 }
 
@@ -250,7 +259,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    margin-top: -30px;
    line-height: 0;
    color: transparent !important; 
-   .opacity(.5);
+   @include opacity(.5);
 
    &:before {
       font-family: 'Glyphicons Halflings';
@@ -260,7 +269,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       color: transparent;
       top: 50%;
 
-      @media(max-width: @screen-xs-max) {
+      @media(max-width: $screen-xs-max) {
          font-size: 30px;
       }
    }
@@ -313,10 +322,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 .nivo-lightbox-title {
-   font: 14px/20px @font-family-sans-serif;
+   font: 14px/20px $font-family-sans-serif;
    color: #fff;
    padding: 7px 15px;
-   border-radius: @border-radius-base;
+   border-radius: $border-radius-base;
    display: inline-block;
    background: rgba(0, 0, 0, 0.5);
 }
@@ -326,7 +335,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    line-height: auto !important;
  
    img {
-      border-radius: @border-radius-base;
+      border-radius: $border-radius-base;
    }
 }
 
@@ -337,7 +346,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
        (min-resolution: 1.3dppx) {
 
    .nivo-lightbox-content.nivo-lightbox-loading { 
-      background-image: url(~'../img/gallery-loading@2x.gif'); 
+      background-image: url('../img/gallery-loading@2x.gif'); 
       background-size: 32px 32px;
    }
 }
