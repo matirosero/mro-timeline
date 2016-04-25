@@ -4,7 +4,8 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php wp_title('|', true, 'right'); ?></title>
-  <meta name="viewport" content="width=1430, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <?php wp_head(); ?>
   
