@@ -37,7 +37,7 @@
               <?php echo dw_timeline_title(); ?>
             </h1>
             <h2 class="page-description"><?php bloginfo('description'); ?></h2>
-            <button id="get-started" class="btn btn-default btn-coner"><?php echo dw_timeline_get_theme_option('get_start','Get Start Now') ?></button>
+            <button id="get-started" class="btn btn-default btn-coner"><?php echo dw_timeline_get_theme_option('get_start','Start Reading') ?></button>
           </div>
         </hgroup>
       <?php elseif( is_search() ) : ?>
