@@ -69,6 +69,11 @@
       color: #bbb;
       font-weight: 500;
       border-radius: $border-radius-small;
+      @media only screen and (max-width : 991px){
+         position: absolute;
+         top:0;
+         left: 30px;
+      }
    }
 }
 
@@ -82,7 +87,7 @@
    &:before {
       position: absolute;
       top: 0;
-      left: 50%;
+      // left: 50%;
       margin-left: -1px;
       width: 2px;
       height: 100%;
@@ -95,6 +100,13 @@
       clear: both;
       content: ' ';
    }
+
+   @media only screen and (min-width : 992px){
+      &:before {
+         left: 50%;
+      }
+   }
+
 }
 
 .timeline .dwtl {
@@ -113,6 +125,10 @@
       background: #e5e5e5;
       content: '';
    }
+
+   @media only screen and (min-width : 992px){
+      
+   }
 }
 
 .two-col .dwtl .entry-inner {
@@ -128,7 +144,10 @@
 
 // Normal
 .two-col .dwtl.normal {
-   width: 50%;
+   width: 100%;
+   @media only screen and (min-width : 992px){
+      width: 50%;
+   }
 }
 
 .two-col .dwtl.normal {
@@ -141,47 +160,18 @@
    }
 }
 
-.dwtl-left {
-   float: left;
-   clear: left;
-   padding-right: 15px;
 
-   &:before {
-      right: -6px; 
-   }
-
-   .entry-inner {
-      &:before {
-         right: -8px;
-         border-left: 8px solid #e5e5e5;
-      }
-
-      &:after {
-         right: -7px;
-         border-left: 8px solid #fff;
-      }
-   }
-}
 
 .dwtl-right {
-   float: right;
-   clear: right;
-   padding-left: 15px;
+   @include default-timeline-element;
+}
 
-   &:before {
-      left: -6px; 
+.dwtl-left {
+   @media only screen and (max-width : 991px){
+      @include default-timeline-element;
    }
-
-   .entry-inner {
-      &:before {
-         left: -8px;
-         border-right: 8px solid #e5e5e5;
-      }
-
-      &:after {
-         left: -7px;
-         border-right: 8px solid #fff;
-      }
+   @media only screen and (min-width : 992px){
+      @include alt-timeline-element;
    }
 }
 
@@ -213,6 +203,33 @@
             top: -7px;
             border-bottom: 8px solid #fff;
          }
+   }
+   @media only screen and (min-width : 992px){
+      &:before {
+         left: 50%;
+         margin-left: -6px;
+         top: -25px;
+      }
+
+      .entry-inner {
+         &:before,
+         &:after {
+            left: 50%;
+            margin-left: -8px;
+            border-right: 8px dashed transparent;
+            border-left: 8px solid transparent;
+         }
+
+            &:before {
+               top: -8px;
+               border-bottom: 8px solid #e5e5e5;
+            }
+
+            &:after {
+               top: -7px;
+               border-bottom: 8px solid #fff;
+            }
+      }
    }
 }
 

@@ -5,5 +5,46 @@
 }
 
 
-    // @include gradient-directional($start-color: #a83279, $end-color: #d38312, $deg: -45deg);
-    // @include opacity(.8);
+@mixin default-timeline-element {
+   float: right;
+   clear: right;
+   padding-left: 15px;
+
+   &:before {
+      left: -6px; 
+   }
+
+   .entry-inner {
+      &:before {
+         left: -8px;
+         border-right: 8px solid #e5e5e5;
+      }
+
+      &:after {
+         left: -7px;
+         border-right: 8px solid #fff;
+      }
+   }
+}
+
+@mixin alt-timeline-element {
+   float: left;
+   clear: left;
+   padding-right: 15px;
+
+   &:before {
+      right: -6px; 
+   }
+
+   .entry-inner {
+      &:before {
+         right: -8px;
+         border-left: 8px solid #e5e5e5;
+      }
+
+      &:after {
+         right: -7px;
+         border-left: 8px solid #fff;
+      }
+   }
+}
