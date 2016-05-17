@@ -1,17 +1,22 @@
-DW Timeline
+MRo Timeline
 ===========
 - Author: Matilde Rosero
 - Author URL: http://matilderosero.com
-- Demo: 
-- Theme Info: 
-- Github: 
+- Demo: http://nobodyasked.net
+- Theme Info: https://github.com/matirosero/mro-timeline
+- Github: https://github.com/matirosero/mro-timeline
 - License: GNU General Public License v3.0
 - License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 - Based on https://github.com/designwall/dw-timeline
 
-Features
+MRo Features
 ------------
+- Responsive
+
+
+DW Timeline Features
+--------------------
 - Beautiful Timeline Design
 - Post format Supported: Standard, Gallery, Image, Quote, Status
 - Bootstrap 3.0.3 ready
@@ -24,8 +29,8 @@ Features
 - Image captions use `<figure>` and `<figcaption>`
 - Multilingual ready
 
- Resources
------------------
+DW Timeline Resources
+---------------------
 - Infinite Scroll - https://github.com/paulirish/infinite-scroll/blob/master/jquery.infinitescroll.js
 - Roots - https://github.com/roots/roots/blob/master/LICENSE.md
 - Bootstrap 3.0.3 - http://getbootstrap.com/getting-started/#license-faqs
