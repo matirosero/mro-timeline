@@ -100,45 +100,45 @@ function dw_timeline_customize_register( $wp_customize ) {
 
   // FONT SELECTOR
   // -------------------------------------------
-  $wp_customize->add_section('dw_timeline_font_selector', array(
-    'title'    => __('Font Selector', 'dw-timeline'),
-    'priority' => 50,
-  ));
+  // $wp_customize->add_section('dw_timeline_font_selector', array(
+  //   'title'    => __('Font Selector', 'dw-timeline'),
+  //   'priority' => 50,
+  // ));
 
-  $fonts = dw_timeline_get_gfonts();
-  $newarray = array();
-  $newarray[] = '';
-  foreach ($fonts as $index => $font) {
-    foreach ($font->files as $key => $value) {
-      $newarray[$font->family . ':dw:' . $value ] = $font->family . ' - ' . $key;
-    }
-  }
+  // $fonts = dw_timeline_get_gfonts();
+  // $newarray = array();
+  // $newarray[] = '';
+  // foreach ($fonts as $index => $font) {
+  //   foreach ($font->files as $key => $value) {
+  //     $newarray[$font->family . ':dw:' . $value ] = $font->family . ' - ' . $key;
+  //   }
+  // }
 
-  $wp_customize->add_setting('dw_timeline_theme_options[heading_font]', array(
-    'default'        => '',
-    'capability'     => 'edit_theme_options',
-    'type'           => 'option',
-  ));
-  $wp_customize->add_control( 'heading_font', array(
-    'settings' => 'dw_timeline_theme_options[heading_font]',
-    'label'   => __('Headding font', 'dw-timeline'),
-    'section' => 'dw_timeline_font_selector',
-    'type'    => 'select',
-    'choices'    => $newarray
-  ));
+  // $wp_customize->add_setting('dw_timeline_theme_options[heading_font]', array(
+  //   'default'        => '',
+  //   'capability'     => 'edit_theme_options',
+  //   'type'           => 'option',
+  // ));
+  // $wp_customize->add_control( 'heading_font', array(
+  //   'settings' => 'dw_timeline_theme_options[heading_font]',
+  //   'label'   => __('Headding font', 'dw-timeline'),
+  //   'section' => 'dw_timeline_font_selector',
+  //   'type'    => 'select',
+  //   'choices'    => $newarray
+  // ));
 
-  $wp_customize->add_setting('dw_timeline_theme_options[body_font]', array(
-    'default'        => '',
-    'capability'     => 'edit_theme_options',
-    'type'           => 'option',
-  ));
-  $wp_customize->add_control( 'body_font', array(
-    'settings' => 'dw_timeline_theme_options[body_font]',
-    'label'   => __('Content font', 'dw-timeline'),
-    'section' => 'dw_timeline_font_selector',
-    'type'    => 'select',
-    'choices'    => $newarray
-  ));
+  // $wp_customize->add_setting('dw_timeline_theme_options[body_font]', array(
+  //   'default'        => '',
+  //   'capability'     => 'edit_theme_options',
+  //   'type'           => 'option',
+  // ));
+  // $wp_customize->add_control( 'body_font', array(
+  //   'settings' => 'dw_timeline_theme_options[body_font]',
+  //   'label'   => __('Content font', 'dw-timeline'),
+  //   'section' => 'dw_timeline_font_selector',
+  //   'type'    => 'select',
+  //   'choices'    => $newarray
+  // ));
 
   // CUSTOM CODE 
   $wp_customize->add_section('dw_timeline_custom_code', array(
@@ -185,13 +185,13 @@ function dw_timeline_get_theme_option( $option_name, $default = false ) {
  *  Get google fonts
  */
 
-if( ! function_exists('dw_timeline_get_gfonts') ) {
-  function dw_timeline_get_gfonts(){
-    $fontsSeraliazed = wp_remote_fopen( get_template_directory_uri() . '/lib/font/gfonts_v2.txt' );
-    $fontArray = unserialize( $fontsSeraliazed );
-    return $fontArray->items;
-  }
-}
+// if( ! function_exists('dw_timeline_get_gfonts') ) {
+//   function dw_timeline_get_gfonts(){
+//     $fontsSeraliazed = wp_remote_fopen( get_template_directory_uri() . '/lib/font/gfonts_v2.txt' );
+//     $fontArray = unserialize( $fontsSeraliazed );
+//     return $fontArray->items;
+//   }
+// }
 
 /**
  * Header code
@@ -277,6 +277,7 @@ add_action( 'wp_head', 'dw_timeline_custom_header' );
 /**
  * Font Selector
  */
+/*
 if( ! function_exists('dw_timeline_typo_font') ) {
   function dw_timeline_typo_font(){
     if (dw_timeline_get_theme_option('heading_font') && dw_timeline_get_theme_option('heading_font') != '') {
@@ -310,3 +311,4 @@ if( ! function_exists('dw_timeline_typo_font') ) {
   }
   add_filter('wp_head','dw_timeline_typo_font');
 }
+*/

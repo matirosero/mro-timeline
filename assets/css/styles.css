@@ -1718,7 +1718,7 @@ html {
 
 /* line 27, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.66666667;
   color: #737373;
@@ -7881,7 +7881,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8019,7 +8019,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -9112,7 +9112,7 @@ blockquote a:hover {
 }
 /* line 64, ../sass/theme/_theme.scss */
 blockquote cite {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
@@ -9427,7 +9427,7 @@ figure.alignnone {
 
 /* line 324, ../sass/theme/_theme.scss */
 .nivo-lightbox-title {
-  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/20px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   padding: 7px 15px;
   border-radius: 4px;
@@ -9774,7 +9774,7 @@ figure.alignnone {
 /* line 337, ../sass/theme/_layout.scss */
 .sidebar .widget-inner > h3 {
   margin: 0 0 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
 }
@@ -10350,7 +10350,7 @@ figure.alignnone {
 /* line 234, ../sass/theme/_hentry.scss */
 #comments > h3 {
   margin: 15px 0 30px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -10436,7 +10436,7 @@ figure.alignnone {
 /* line 318, ../sass/theme/_hentry.scss */
 #respond > h3 {
   margin: 15px 0 30px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;

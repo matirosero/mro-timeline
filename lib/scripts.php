@@ -7,6 +7,9 @@ function dw_timeline_scripts() {
 
   wp_enqueue_style( 'dw_timeline_style', get_stylesheet_uri(), false);
 
+  wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Roboto:300,300i,700,700i', false
+  );
+
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
